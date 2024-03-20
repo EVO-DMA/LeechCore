@@ -3741,6 +3741,10 @@ BOOL DeviceFPGA_Open(_Inout_ PLC_CONTEXT ctxLC, _Out_opt_ PPLC_CONFIG_ERRORINFO 
         goto fail;
     }
     DeviceFPGA_SetPerformanceProfile(ctx);
+
+    // Set the real device name
+    strcpy_s(ctxLC->Config.szDeviceName, MAX_PATH, ctx->perf.SZ_DEVICE_NAME);
+
     ctx->rxbuf.cbMax = ctx->dev.f2232h ? 0x01000000 : (DWORD)(1.30 * ctx->perf.MAX_SIZE_RX + 0x2000);  // buffer size tuned to lowest possible (+margin) for performance (FT601).
     ctx->rxbuf.pb = LocalAlloc(0, 0x01000000);
     if(!ctx->rxbuf.pb) { goto fail; }
