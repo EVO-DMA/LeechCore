@@ -45,14 +45,7 @@ Please find a summary of the supported hardware based memory acquisition methods
 | [Screamer PCIe Squirrel](https://github.com/ufrisk/pcileech-fpga/tree/master/PCIeSquirrel) | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA) | USB-C | 190MB/s  | Yes | Yes | 💖 |
 | [ZDMA](https://github.com/ufrisk/pcileech-fpga-dev/blob/master/ZDMA)              | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)   | Thunderbolt3 | 1000MB/s | Yes | Yes | 💖 |
 | [LeetDMA](https://github.com/ufrisk/pcileech-fpga)                                | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
-| [Enigma X1](https://github.com/ufrisk/pcileech-fpga/tree/master/EnigmaX1)         | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 200MB/s  | Yes | Yes | 💖 |
-| [PCIeScreamerR04](https://github.com/ufrisk/pcileech-fpga/tree/master/ScreamerM2) | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
-| [ScreamerM2](https://github.com/ufrisk/pcileech-fpga/tree/master/ScreamerM2)      | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB3  | 190MB/s  | Yes | Yes | 💖 |
 | [AC701/FT601](https://github.com/ufrisk/pcileech-fpga/tree/master/ac701_ft601)    | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB3  | 190MB/s  | Yes | Yes |    |
-| [PCIeScreamer](https://github.com/ufrisk/pcileech-fpga/tree/master/pciescreamer)  | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB3  | 100MB/s  | Yes | Yes |    |
-| [SP605/FT601](https://github.com/ufrisk/pcileech-fpga/tree/master/sp605_ft601)    | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB3  |  75MB/s  | Yes | Yes |    |
-| [Acorn/FT2232H](https://github.com/ufrisk/pcileech-fpga/tree/master/acorn_ft2232h)| [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB2  |  25MB/s  | Yes | Yes |    |
-| [NeTV2/UDP](https://github.com/ufrisk/pcileech-fpga/tree/master/NeTV2)            | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_RawUDP)        | UDP   |   7MB/s  | Yes | Yes |    |
 | USB3380-EVB                                                                       | [USB3380](https://github.com/ufrisk/LeechCore/wiki/Device_USB3380)    | USB3  | 150MB/s  | No  | No  |    |
 | PP3380                                                                            | [USB3380](https://github.com/ufrisk/LeechCore/wiki/Device_USB3380)    | USB3  | 150MB/s  | No  | No  |    |
 | DMA patched HP iLO                                                                | [BMC](https://github.com/ufrisk/LeechCore/wiki/Device_RawTCP)         | TCP   |  1MB/s   | Yes | No  |    |
@@ -233,12 +226,12 @@ v1.0-1.8
 * Improved FPGA performance for smaller reads.
 * QEMU support on Linux (VM live memory introspection).
 * Improved [MemProcFS remoting](https://github.com/ufrisk/MemProcFS/wiki/_Remoting) via a remote [LeechAgent](https://github.com/ufrisk/LeechCore/wiki/LeechAgent). Full MemProcFS remote support over SMB - tcp/445. Perfect for memory forensics Incident Response (IR)!
-</details>
 
 [v2.16](https://github.com/ufrisk/LeechCore/releases/tag/v2.16)
 * PCIe BAR information and user callback (easier implementation of custom devices).
 * ARM64 memory dump (.dmp) and VMWare Fusion (.vmem/.vmsn) support.
 * Improved handling of PCIe TLP user callback.
+</details>
 
 [v2.17](https://github.com/ufrisk/LeechCore/releases/tag/v2.17)
 * Bug fixes.
@@ -246,3 +239,7 @@ v1.0-1.8
 * Support for plugin device drivers.
 * Linux PCIe FPGA performance improvements.
 * Linux PCIe FPGA multiple devices (devindex) supported.
+
+[v2.18](https://github.com/ufrisk/LeechCore/releases/tag/v2.18)
+* Bug fixes.
+* Hibernation file support.
